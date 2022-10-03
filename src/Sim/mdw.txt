@@ -1,0 +1,93 @@
+[WaveFileInformation]
+   FileVersion          = 02.00                        
+[General]
+   FlowFile             = tst.mdf                      
+   OnlyInputVerify      = false                        
+   SimMode              = stationary                   
+   DirConvention        = nautical                     
+   ReferenceDate        = 2005-01-01                          
+   TSeriesFile          = tst.bcw                      
+[Constants]
+   WaterLevelCorrection =  0.0000000e+000              
+   Gravity              =  9.8100004e+000              
+   WaterDensity         =  1.0250000e+003              
+   NorthDir             =  9.0000000e+001              
+   MinimumDepth         =  5.0000001e-002              
+[Processes]
+   GenModePhys          = 3                            
+   Breaking             = true                         
+   BreakAlpha           =  1.0000000e+000              
+   BreakGamma           =  7.3000002e-001              
+   Triads               = false                        
+   TriadsAlpha          =  1.0000000e-001              
+   TriadsBeta           =  2.2000000e+000              
+   BedFriction          = jonswap                      
+   BedFricCoef          =  6.7000002e-002              
+   Diffraction          = false                        
+   DiffracCoef          =  2.0000000e-001              
+   DiffracSteps         = 5                            
+   DiffracProp          = true                         
+   WindGrowth           = true                        
+   WhiteCapping         = Komen                        
+   Quadruplets          = true                       
+   Refraction           = true                         
+   FreqShift            = true                         
+   WaveForces           = dissipation 3d               
+[Numerics]
+   DirSpaceCDD          =  5.0000000e-001              
+   FreqSpaceCSS         =  5.0000000e-001              
+   RChHsTm01            =  2.0000000e-002              
+   RChMeanHs            =  2.0000000e-002              
+   RChMeanTm01          =  2.0000000e-002              
+   PercWet              =  9.8000000e+001              
+   MaxIter              = 15                           
+[Output]
+   TestOutputLevel      = 0                            
+   TraceCalls           = false                        
+   UseHotFile           = false                        
+   MapWriteInterval     = 1.4400000e+003              
+   WriteCOM             = true                         
+   COMWriteInterval     =  6.0000000e+001              
+[Domain]
+   Grid                 = tst2.grd                     
+   FlowBedLevel         = 1                            
+   FlowWaterLevel       = 1                            
+   FlowVelocity         = 1                            
+   FlowWind             = 0                            
+   BedLevel             = tst2.dep                     
+   DirSpace             = circle                       
+   NDir                 = 36                           
+   StartDir             =  0.0000000e+000              
+   EndDir               =  0.0000000e+000              
+   FreqMin              =  5.0000001e-002              
+   FreqMax              =  1.0000000e+000              
+   NFreq                = 24                           
+   Output               = true  
+[Boundary]
+   Name                 = West                         
+   Definition           = grid-coordinates             
+   StartCoordM          = 1                            
+   EndCoordM            = 1                            
+   StartCoordN          = 13                           
+   EndCoordN            = 77                           
+   SpectrumSpec         = parametric                   
+   SpShapeType          = jonswap                      
+   PeriodType           = peak                         
+   DirSpreadType        = power                        
+   PeakEnhanceFac       =  3.3000000e+000              
+   GaussSpread          =  9.9999998e-003              
+[Boundary]
+   Name                 = North                        
+   Definition           = grid-coordinates                  
+   StartCoordM          = 60                           
+   EndCoordM            = 404                           
+   StartCoordN          = 408                           
+   EndCoordN            = 408                   
+   SpectrumSpec         = parametric                   
+   SpShapeType          = jonswap                      
+   PeriodType           = peak                         
+   DirSpreadType        = power                        
+   PeakEnhanceFac       =  3.3000000e+000              
+   GaussSpread          =  9.9999998e-003 
+
+
